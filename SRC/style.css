@@ -10,9 +10,10 @@
 :root {
     font-size: 62.5%;
     --background: #f3f5f7;
+    --background-secondary: #2662ff;
     --color-primary: #1a202c;
     --color-secondary: #ffff;
-    --color-text:#717171
+    --color-text: #717171
 }
 
 
@@ -40,8 +41,93 @@
     margin-block: 2rem;
 }
 
-.l-main{
+.l-main {
     width: 100%;
+}
+
+
+
+.l-header {
+    background: var(--background-secondary);
+    flex-flow: row wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: column;
+
+    width: 100%;
+    max-width: 90em;
+
+
+    width: min(100dvw - 2rem, 96rem);
+
+    padding: 6rem;
+}
+
+.l-header__title {
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--color-secondary)
+}
+
+.l-header__title p {
+    font-size: 2rem
+}
+
+
+
+.l-header__search {
+    display: flex;
+    align-items: center;
+
+    height: 4em;
+    width: 100%;
+
+    padding: 2.2em;
+    gap: 1.4em;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-radius: .8rem;
+
+    margin-top: 1em;
+}
+
+.input-search {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+
+    padding: 1em;
+}
+
+
+.input-search::placeholder {
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 48em) {
+    .l-header .content {
+        gap: 7.3em;
+    }
+
+    .l-header__title {
+        font-size:2em;
+    }
+
+    .l-header__search {
+        height: 6.5em;
+    }
 }
 
 
@@ -82,14 +168,14 @@
     border-radius: 0.5em;
 }
 
-.list-itens h1{
+.list-itens h1 {
     font-size: 2.5rem;
     font-family: 'Lexend', sans-serif;
     font-weight: 400;
- /*    text-transform: uppercase; */
+    /*    text-transform: uppercase; */
 }
 
-.list-itens p{
+.list-itens p {
     font-size: 1.5rem;
     color: var(--color-text);
     font-weight: 400;
@@ -97,13 +183,13 @@
     letter-spacing: 1px;
 }
 
-.list-itens header{
+.list-itens header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.list-itens header p{
+.list-itens header p {
     font-family: 'Lexend', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -115,5 +201,3 @@ svg:hover path {
 }
 
 /*DIV CONTENT_LIST*/
-
-
